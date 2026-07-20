@@ -1,3 +1,5 @@
-holiss
+El testing 1 vemos un ejemplo para node 18
+
+El testing 2 cambiamos la opción "with" para python
 
 
