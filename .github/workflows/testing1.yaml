@@ -19,7 +19,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+#python-version: '3.11'
 
+#      - name: Install dependencies python
+#        run: pip install -r requirements.txt
       - name: Install dependencies node
         run: npm install
 
