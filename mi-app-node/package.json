@@ -1,0 +1,11 @@
+{
+  "name": "node-basico-github-actions",
+  "version": "1.0.0",
+  "description": "App básica de Node.js con tests y GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test"
+  },
+  "type": "module"
+}

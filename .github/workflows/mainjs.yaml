@@ -1,0 +1,32 @@
+name: Node.js CI
+
+# Elige los eventos que disparan la ejecución
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Descarga el código del repositorio en el servidor de GitHub
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
+
+    # Configura el entorno con la versión estable de Node.js
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm' # Optimiza futuras ejecuciones guardando dependencias en caché
+
+    # Instala las dependencias necesarias (si existieran en package.json)
+    - name: Instalar dependencias
+      run: npm ci
+
+    # Ejecuta el script de pruebas configurado
+    - name: Ejecutar pruebas
+      run: npm test

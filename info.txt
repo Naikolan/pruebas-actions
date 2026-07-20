@@ -1,5 +1,5 @@
 El testing 1 vemos un ejemplo para node 18
 
-El testing 2 cambiamos la opción "with" para python
-
+paso 2: agregamos la app de node que viene con test
+paso 3: corremos primeras pruebas
 
