@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: self-hosted, linux
+    runs-on: self-hosted
 
     steps:
     # Descarga el código del repositorio en el servidor de GitHub
