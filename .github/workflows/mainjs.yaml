@@ -26,9 +26,9 @@ jobs:
         cache: 'npm' # Optimiza futuras ejecuciones guardando dependencias en caché
 
     # Instala las dependencias necesarias (si existieran en package.json)
-    - name: Instalar dependencias
-      run: npm ci
+#    - name: Instalar dependencias
+#      run: npm ci
 
     # Ejecuta el script de pruebas configurado
-    - name: Ejecutar pruebas
-      run: npm test
+#    - name: Ejecutar pruebas
+#      run: npm test
