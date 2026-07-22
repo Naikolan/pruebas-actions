@@ -9,18 +9,20 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted, linux
 
     steps:
     # Descarga el código del repositorio en el servidor de GitHub
     - name: Clonar repositorio
       uses: actions/checkout@v5
+      
 
     # Configura el entorno con la versión estable de Node.js
     - name: Configurar Node.js
       uses: actions/setup-node@v5
       with:
         node-version: 20
+        cache-dependency-path: ./mi-app-node/
         cache: 'npm' # Optimiza futuras ejecuciones guardando dependencias en caché
 
     # Instala las dependencias necesarias (si existieran en package.json)
